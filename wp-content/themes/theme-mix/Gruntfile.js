@@ -18,6 +18,7 @@ module.exports = function(grunt) {
     'assets/vendor/bootstrap/js/scrollspy.js',
     'assets/vendor/bootstrap/js/tab.js',
     'assets/vendor/bootstrap/js/affix.js',
+    'assets/vendor/owl.carousel/dist/owl.carousel.js',
     'assets/js/plugins/*.js',
     'assets/js/_*.js'
   ];
