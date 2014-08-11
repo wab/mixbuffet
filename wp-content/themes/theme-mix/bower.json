@@ -1,9 +1,9 @@
 {
-  "name": "roots",
-  "version": "7.0.0",
-  "homepage": "http://roots.io",
+  "name": "mixbuffet",
+  "version": "1.0.0",
+  "homepage": "http://www.mix-snacking.com",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "wab <contact@wabdesign.fr>"
   ],
   "license": "MIT",
   "private": true,
@@ -16,6 +16,8 @@
     "modernizr": "2.8.2",
     "jquery": "1.11.1",
     "bootstrap": "3.2.0",
-    "respond": "1.4.2"
+    "respond": "1.4.2",
+    "yamm3": "~1.0.0",
+    "owl.carousel": "*"
   }
 }

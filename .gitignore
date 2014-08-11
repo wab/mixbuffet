@@ -34,13 +34,3 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/theme-mix/
 
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-wp-content/themes/theme-mix/node_modules
-wp-content/themes/theme-mix/assets/vendor/*
-wp-content/themes/theme-mix/assets/css/main.css.map
-wp-content/themes/theme-mix/assets/css/*main*.css
-wp-content/themes/theme-mix/assets/js/*scripts*.js
-wp-content/themes/theme-mix/assets/js/vendor/modernizr.min.js
-wp-content/themes/theme-mix/assets/manifest.json
-
