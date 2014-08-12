@@ -1,6 +1,9 @@
 <header class="banner" role="banner">
-  <div class="container"></div>
-    <div class="navbar-brand hidden-lg"><?php bloginfo('name'); ?></div>
+
+  <!-- <div class="container"> -->
+
+    <div class="navbar-brand hidden-lg"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logomix.png" alt="<?php bloginfo('name'); ?>"></div>
+
     <div class="navbar yamm navbar-default navbar-static-top">
       
         <div class="navbar-header">
@@ -26,8 +29,8 @@
             <li class="dropdown yamm-fw pink">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nos produits</a>
                <ul class="dropdown-menu">
-                 <li>                  
-                    <div class="yamm-content">
+                 <li>           
+                    <div class="container">
                       <div class="row">
                         <div class="col-md-3 col-sm-6">
                           <h2>Titre menu</h2>
@@ -177,9 +180,9 @@
                </ul>
             </li>
             <li class="navbar-brand visible-lg-inline-block">
-              <?php bloginfo('name'); ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logomix.png" alt="<?php bloginfo('name'); ?>">
             </li>
-            <li class="dropdown yamm-fw push">
+            <li class="dropdown yamm-fw pink push">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nos engagements</a>
                <ul class="dropdown-menu">
                  <li>                  
@@ -336,6 +339,8 @@
 
         </nav><!-- navbar-collapse -->
 
-      </div><!-- navbar -->
-  </div>
+    </div><!-- navbar -->
+
+  <!-- </div> --> <!-- container -->
+
 </header>
