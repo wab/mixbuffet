@@ -1,19 +1,25 @@
+<aside class="section engagements">
+   <div class="container">
+      <h1>Nos engagements</h1>
+   </div>
+</aside>
+
 <footer class="content-info" role="contentinfo">
-  <div class="wrap container">
+  <div class="wrap container border-radius">
    	<div class="row">
    		<div class="col-lg-8">
-   			<div class="wrapper">
+   			<div class="wrapper border-top-left-radius">
    				<h2>Mix par buffet</h2>
    				<p>Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Nunc iaculis risus vel orci ornare dignissim sed vitae nulla. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh (iaculis pretium sem orci aliquet mauris). Nulla lobortis tempus commodo. Suspendisse potenti cras molestie, risus a enim convallis vitae luctus libero lacinia. Aliquam tincidunt velit sit amet ante hendrerit tempus.</p>
    				<p><a href="#" class="btn btn-default">visiter le site</a></p>
    			</div>
-   			<div class="wrapper">
+   			<div class="wrapper border-bottom-left-radius">
    				<h2>Recrutement</h2>
    				<p><a href="#" class="btn btn-default">Contact recrutement</a></p>
    			</div>
    		</div>
    		<div class="col-lg-4">
-   			<div class="wrapper">
+   			<div class="wrapper border-top-right-radius">
    				<h2>Coordonnées</h2>
    				<address>
    					<strong>za du val coric<br>

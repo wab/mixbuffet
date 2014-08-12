@@ -7,27 +7,43 @@ body {
 	min-height: 300px;
 	position: relative;
 	z-index: 0;
-	padding: @wrap-margin 0;
 	border-top: @border;
-	border-bottom: @border
+	border-bottom: @border;
 }
 .wrap {
 	background: #fff;
 	border : @border;
 	border-width: 5px;
-	border-radius: @border-radius-large @border-radius-large 0 @border-radius-large;
-	box-shadow: @shadow;
-	margin-top: -@wrap-margin;
-	margin-bottom: -@wrap-margin;
-	position: relative;
-	z-index: @zindex-dropdown;
+	@media (min-width: @screen-md-min) {
+		box-shadow: @shadow;
+	}
+	
 }
 
 .wrapper {
 	margin: 5px;
+	margin-bottom: 5px;
 	border: 1px solid #eee;
 	background: #f9f9f9;
 	padding: 10px;
+}
+
+.relief {
+	@media (min-width: @screen-md-min) {
+		margin-top: -@wrap-margin;
+		margin-bottom: -@wrap-margin;
+		position: relative;
+		z-index: @zindex-dropdown;
+	}
+	@media (max-width: @screen-md-min) {
+		margin-top: @wrap-margin;
+		margin-bottom: @wrap-margin;
+	}
+
+}
+
+.relief + .section {
+	padding-top: @wrap-margin;
 }
 
 .btn-default {
@@ -35,4 +51,17 @@ body {
 }
 .btn {
 	border-radius: @border-radius-base @border-radius-base 0 @border-radius-base
+}
+
+.border-top-left-radius {
+	border-top-left-radius: @border-radius-large;
+}
+.border-top-right-radius {
+	border-top-right-radius: @border-radius-large;
+}
+.border-bottom-left-radius {
+	border-bottom-left-radius: @border-radius-large;
+}
+.border-radius {
+	border-radius: @border-radius-large @border-radius-large 0 @border-radius-large;
 }
