@@ -32,9 +32,24 @@
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
-   <section class="section">
+   <section class="section section-actus">
     <div class="container">
-      <h1>actus</h1>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+           <h1 class="titre">News de <strong>mix</strong></h1>
+           <a href="#" class="btn btn-default">Toutes les actus</a>
+           <article>
+              <h2 class="h4">titre de l'actus</h2>
+              <p>Vestibulum sit amet ipsum lacus. Maecenas sit amet tellus – nec mi gravida posuere non pretium magna. Suspendisse potenti.</p>
+              <a href="#">Lire l'article</a>
+            </div>
+            
+           </article>
+        </div>
+        <div class="col-md-6 hidden-sm hidden-xs">
+           
+        </div>
+      </div>
     </div>
   </section>
 

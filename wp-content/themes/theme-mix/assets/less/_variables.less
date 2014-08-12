@@ -1,3 +1,8 @@
+//** Background color for `<body>`.
+@body-bg:               #f4f4f4;
+//** Global text color on `<body>`.
+@text-color:            #000;
+
 // Brand colors
 // -------------------------
 
@@ -15,6 +20,10 @@
 @border-radius-base : 6px;
 @border-radius-large : 15px;
 @border : 4px solid #fff;
+
+//headings
+// -------------------------
+@headings-small-color : inherit;
 
 // Glyphicons path
 // -------------------------
@@ -56,8 +65,15 @@
 //Btn
 //-------------------------
 
-@btn-default-color:              #fff;
-@btn-default-bg:                 #000;
+@btn-font-weight:                bold;
+
+@btn-default-color:              @pink;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #ccc;
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 #000;
+@btn-primary-border:             darken(@btn-primary-bg, 5%);
 
 
 

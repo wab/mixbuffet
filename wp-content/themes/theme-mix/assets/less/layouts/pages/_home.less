@@ -1,0 +1,34 @@
+.home .main h1 {
+	background-color: @orange;
+	color: #fff;
+	padding: @padding-base-large 0;
+	margin: 5px;
+}
+
+.section-actus {
+	color: #fff;
+	background: #e20072;
+	@media (min-width: @screen-md-min) {
+		background: linear-gradient(to right, #e20072 50%,#ffffff 50%,#ffffff 50%);
+	}
+	article {
+		margin-right: @padding-base-large;
+		a {
+			display: block;
+			padding: @padding-base-large 0;
+			border: dashed 1px #fff;
+			border-left: none;
+			border-right: none;
+			color: #fff;
+		&:before {
+			content: '> ';
+			}
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: #000
+			}
+		}
+
+	}	
+}
