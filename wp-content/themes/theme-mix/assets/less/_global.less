@@ -44,3 +44,26 @@ h1,h2,h3,h4,h5, .h1, .h2, .h3, .h4, .h5 {
 	padding-bottom: 5px;
 	border-bottom: solid 2px;
 }
+
+// Contextual backgrounds
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  a {
+  	color: #fff;
+  }
+}
+.bg-pink,
+.bg-orange,
+.bg-green {
+  color: #fff;
+}
+.bg-pink {
+  .bg-variant(@pink);
+}
+.bg-orange {
+  .bg-variant(@orange);
+}
+.bg-green {
+  .bg-variant(@green);
+}

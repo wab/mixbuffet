@@ -36,6 +36,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12">
+          <div class="wrapper">
            <h1 class="titre">News de <strong>mix</strong></h1>
            <a href="#" class="btn btn-default">Toutes les actus</a>
            <article>
@@ -45,6 +46,7 @@
             </div>
             
            </article>
+          </div>
         </div>
         <div class="col-md-6 hidden-sm hidden-xs">
            
