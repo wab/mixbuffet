@@ -65,6 +65,12 @@ var Roots = {
           nav:true,
           navText:[,]
         });
+      $('.slider-produits').owlCarousel({
+          loop:true,
+          items:1,
+          dots:false,
+          nav:true
+        });
     }
   },
   // About us page, note the change from about-us to about_us.

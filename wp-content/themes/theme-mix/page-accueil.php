@@ -22,7 +22,7 @@ Template Name: Accueil
       $texte = get_sub_field('texte');
 
       $background = get_sub_field('background');
-
+      
       ?>
       
       <div class="slide-carousel" <?php if( $background ): ?> style="background: url(<?php echo $background; ?>); background-size:100%;" <?php endif; ?> >
@@ -32,7 +32,7 @@ Template Name: Accueil
             <a href="<?php echo $link; ?>">
           <?php endif; ?>
 
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" class="img-responsive" />
 
           <?php if( $link ): ?>
             </a>
@@ -56,7 +56,7 @@ Template Name: Accueil
 
   <div class="wrap container hidden-md hidden-lg">
     <div class="wrapper">
-      <h1>Slider produits</h1>
+      <?php get_template_part('templates/slider-produits'); ?>
     </div>
   </div>
 
@@ -123,7 +123,7 @@ Template Name: Accueil
 
   <div class="wrap container relief border-radius hidden-xs hidden-sm">
     <div class="wrapper border-radius">
-      <h1>Slider produits</h1>
+      <?php get_template_part('templates/slider-produits'); ?>
     </div>
   </div>
 
