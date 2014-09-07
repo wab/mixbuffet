@@ -21,7 +21,7 @@ $the_query = new WP_Query( $stickyProduits); ?>
 			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it. ?>
 		<div class="slide-produits">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			<?php the_post_thumbnail('prouuits', array( 'class' => 'img-responsive' )); ?>
+			<?php the_post_thumbnail('produits', array( 'class' => 'img-responsive' )); ?>
 			</a>
 		</div>
 		<?php } ?>
