@@ -14,7 +14,7 @@
          </div>
          <div class="wrapper wrapper-border border-bottom-left-radius">
             <h2  class="titre"><strong>Recrutement</strong></h2>
-            <p><a href="#" class="btn btn-primary">Contact recrutement</a></p>
+            <p><a data-toggle="modal" data-target="#recrutement" class="btn btn-primary">Contact recrutement</a></p>
          </div>
       </div>
       <div class="col-lg-4">
@@ -52,6 +52,24 @@
          </div>
       </div>
    </div><!-- row -->
+   <!-- Modal -->
+   <div class="modal fade" id="recrutement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+           <h3 class="modal-title" id="myModalLabel">Contact recrutement</h3>
+         </div>
+         <div class="modal-body">
+           <p>contenu page recrutement</p>
+           <p>Écrire à : <a href="mailto:recrutement@mix-buffet.com">recrutement@mix-buffet.com</a></p>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+         </div>
+       </div>
+     </div>
+   </div>
 </footer>
 
 <?php wp_footer(); ?>
