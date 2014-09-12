@@ -140,3 +140,10 @@ function gkp_add_sticky_post_support()
   
 <?php
 }
+
+// Ajouter le lien pour récupérer le mot de passe, si l'utilisateur ne s'en souvient plus
+add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
+function lien_mot_de_passe_perdu( $formbottom ) {
+  $formbottom .= '<a href="' . wp_lostpassword_url() . '">Mot de passe perdu ?</a>';
+  return $formbottom;
+}
