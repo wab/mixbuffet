@@ -1,0 +1,30 @@
+.menu-produits {
+	padding: 0 3em 0 1em;
+	list-style: none;
+
+	> li > a {
+		display: block;
+		font-size: 20px;
+		text-align: left;
+	}
+	
+	.subpages {
+		padding: 1em 0 0 1em;
+		list-style: none;
+		li {
+			margin-bottom: 0.6em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.active {
+		.btn-default {
+			background-color: @pink;
+		    color: #fff;
+		    border-color: @pink;
+		}
+	}
+
+}

@@ -31,7 +31,7 @@
                           <h2 class="h4">Les entrées / encas</h2>
                           <?php 
                             if (has_nav_menu('entrees')) :
-                              wp_nav_menu(array('theme_location' => 'entrees', 'menu_class' => 'nav nav-stacked'));
+                              wp_nav_menu(array('theme_location' => 'entrees', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
                             endif;
                           ?>
                         </div>
@@ -39,7 +39,7 @@
                           <h2 class="h4">Les salades</h2>
                           <?php 
                             if (has_nav_menu('salades')) :
-                              wp_nav_menu(array('theme_location' => 'salades', 'menu_class' => 'nav nav-stacked'));
+                              wp_nav_menu(array('theme_location' => 'salades', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
                             endif;
                           ?>
                         </div>
@@ -47,7 +47,7 @@
                           <h2 class="h4">Les plats chauds</h2>
                           <?php 
                             if (has_nav_menu('plats')) :
-                              wp_nav_menu(array('theme_location' => 'plats', 'menu_class' => 'nav nav-stacked'));
+                              wp_nav_menu(array('theme_location' => 'plats', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
                             endif;
                           ?>
                         </div>
@@ -55,7 +55,7 @@
                           <h2 class="h4">Les innovations</h2>
                           <?php 
                             if (has_nav_menu('innovations')) :
-                              wp_nav_menu(array('theme_location' => 'innovations', 'menu_class' => 'nav nav-stacked'));
+                              wp_nav_menu(array('theme_location' => 'innovations', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
                             endif;
                           ?>
                         </div>
@@ -125,7 +125,7 @@
                </ul>
             </li>
             <li class="yamm-fw green">
-              <a href="#">Espace presse</a>
+              <a href=" <?php echo get_permalink('2'); ?> ">Espace presse</a>
             </li>
          </ul>
 

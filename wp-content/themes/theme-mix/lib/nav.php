@@ -49,6 +49,34 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
   }
 }
 
+class Produits_Nav_Walker extends Walker_Nav_Menu {
+  function check_current($classes) {
+    return preg_match('/(current[-_])|active|dropdown/', $classes);
+  }
+
+  function start_lvl(&$output, $depth = 0, $args = array()) {
+    $output .= "\n<ul class=\"subpages\">\n";
+  }
+
+  function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+    $item_html = '';
+    parent::start_el($item_html, $item, $depth, $args);
+
+    if ($depth === 1) {
+      $item_html = str_replace('<a', '<span class="glyphicon glyphicon-chevron-right"></span> <a', $item_html);
+    }
+
+    elseif ($depth === 0) {
+      $item_html = str_replace('<a', '<a class="btn btn-default h2"', $item_html);
+    }
+
+    $item_html = apply_filters('roots/wp_nav_menu_item', $item_html);
+    $output .= $item_html;
+  }
+
+
+}
+
 /**
  * Remove the id="" on nav menu items
  * Return 'menu-slug' for nav menu classes
