@@ -62,14 +62,15 @@ var Roots = {
           loop:false,
           items:1,
           dots:true,
-          nav:true,
+          nav:false,
           navText:[,]
         });
       $('.slider-produits').owlCarousel({
           loop:true,
           items:1,
-          dots:false,
-          nav:true
+          dots:true,
+          nav:false,
+          navText:[,]
         });
     }
   },

@@ -104,7 +104,7 @@
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logomix.png" alt="<?php bloginfo('name'); ?>">
             </li>
             <li class=" yamm-fw pink push">
-              <a href="#">Nos engagements</a>
+              <a href="<?php echo get_permalink('64'); ?>">Nos engagements</a>
             </li>
             <li class="dropdown yamm-fw orange">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mix et vous</a>
@@ -125,7 +125,7 @@
                </ul>
             </li>
             <li class="yamm-fw green">
-              <a href=" <?php echo get_permalink('2'); ?> ">Espace presse</a>
+              <a href="<?php echo get_permalink('2'); ?>">Espace presse</a>
             </li>
          </ul>
 

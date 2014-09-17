@@ -1,0 +1,33 @@
+a.engagement {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	.caption-engagement {
+		display: none;
+	}
+	&:hover {
+		.caption-engagement {
+			display: block;
+		}
+	}
+}
+.caption-engagement {
+	background-color: rgba(242,146,0,0.8);
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	h2 {
+		color: #fff;
+		opacity: 1;
+
+	}
+}
+
+@media (max-width: @screen-sm-min) {
+  // Only float images if not on an extra small device like smartphones
+ a.engagement .caption-engagement {
+ 	position: static;
+ 	display: block;
+ }
+}

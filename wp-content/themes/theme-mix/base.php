@@ -20,6 +20,12 @@
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
+  <aside class="section engagements">
+   <div class="container">
+      <h1  class="titre">Nos <strong>engagements</strong></h1>
+   </div>
+  </aside>
+
   <?php get_template_part('templates/footer'); ?>
 
 </body>

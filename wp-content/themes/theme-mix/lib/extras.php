@@ -104,7 +104,7 @@ add_action( 'init', 'register_prisma_menus' );
 
 // Tailles des vignettes
 
-add_image_size( 'square', 300, 300, true );
+add_image_size( 'square', 450, 450, true );
 add_image_size( 'actus', 600, 300, true );
 add_image_size( 'produits', 1000, 500, true );
 

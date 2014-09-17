@@ -1,8 +1,3 @@
-<aside class="section engagements">
-   <div class="container">
-      <h1  class="titre">Nos <strong>engagements</strong></h1>
-   </div>
-</aside>
 
 <aside class="wrap container border-radius relief footer">
    <div class="row">
