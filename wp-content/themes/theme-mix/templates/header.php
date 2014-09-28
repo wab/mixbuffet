@@ -28,7 +28,7 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-md-3 col-sm-6">
-                          <h2 class="h4">Les entrées / encas</h2>
+                          <h2 class="h3">Les entrées / encas</h2>
                           <?php 
                             if (has_nav_menu('entrees')) :
                               wp_nav_menu(array('theme_location' => 'entrees', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
@@ -36,7 +36,7 @@
                           ?>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                          <h2 class="h4">Les salades</h2>
+                          <h2 class="h3">Les salades</h2>
                           <?php 
                             if (has_nav_menu('salades')) :
                               wp_nav_menu(array('theme_location' => 'salades', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
@@ -44,7 +44,7 @@
                           ?>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                          <h2 class="h4">Les plats chauds</h2>
+                          <h2 class="h3">Les plats chauds</h2>
                           <?php 
                             if (has_nav_menu('plats')) :
                               wp_nav_menu(array('theme_location' => 'plats', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
@@ -52,7 +52,7 @@
                           ?>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                          <h2 class="h4">Les innovations</h2>
+                          <h2 class="h3">Les innovations</h2>
                           <?php 
                             if (has_nav_menu('innovations')) :
                               wp_nav_menu(array('theme_location' => 'innovations', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
@@ -65,7 +65,7 @@
                </ul>
             </li>
             <li class="dropdown yamm-fw orange">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Le snaking break</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Le snacking break</a>
                <ul class="dropdown-menu">
                  <li>                  
                     <div class="container">
@@ -114,8 +114,8 @@
                       <div class="row">
                         <div class="col-md-3 col-sm-6">
                           <?php 
-                            if (has_nav_menu('mix-story')) :
-                              wp_nav_menu(array('theme_location' => 'mix-story', 'menu_class' => 'nav nav-stacked'));
+                            if (has_nav_menu('mix-et-vous')) :
+                              wp_nav_menu(array('theme_location' => 'mix-et-vous', 'menu_class' => 'nav nav-stacked'));
                             endif;
                           ?>
                         </div>                      
@@ -125,7 +125,7 @@
                </ul>
             </li>
             <li class="yamm-fw green">
-              <a href="<?php echo get_permalink('2'); ?>">Espace presse</a>
+              <a href="<?php echo site_url( '/espace-presse');?>">Espace presse</a>
             </li>
          </ul>
 

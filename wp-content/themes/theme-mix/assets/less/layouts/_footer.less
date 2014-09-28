@@ -1,6 +1,4 @@
-.engagements {
-	background-color: @green;
-}
+
 .content-info {
 	margin-top: @wrap-margin + 20px;
 	.col-xs-4 {
@@ -15,4 +13,19 @@
 	.container {
 		padding: 20px 0;
 	}
+}
+
+.nav-footer li {
+	display: inline-block;
+
+	&:after {
+		content: ' /';
+	}
+
+	&:last-child {
+		&:after {
+		content: none;
+		}
+	}
+	
 }

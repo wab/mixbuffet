@@ -16,7 +16,7 @@
 
   <aside class="section engagements">
    <div class="container">
-      <h1  class="titre">Nos <strong>engagements</strong></h1>
+      <a href="<?php echo get_permalink('64'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/engagements.jpg" class="img-responsive"></a>
    </div>
   </aside>
   

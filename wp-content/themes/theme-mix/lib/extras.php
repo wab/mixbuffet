@@ -37,6 +37,7 @@ function register_prisma_menus() {
       'snaking-break' => __( 'Le snaking break'),
       'mix-story' => __( 'Mix story'),
       'mix-et-vous' => __( 'Mix et vous'),
+      'footer' => __( 'Pied de page')
     )
   );
 }
@@ -123,27 +124,54 @@ add_action( 'admin_menu', 'edit_admin_menus' );
 remove_action( 'ninja_forms_display_css', 'ninja_forms_display_css', 10, 2 );
 
 
-//Sticky custom post type
-add_action( 'admin_footer-post.php', 'gkp_add_sticky_post_support' );
-add_action( 'admin_footer-post-new.php', 'gkp_add_sticky_post_support' );
-function gkp_add_sticky_post_support() 
-{ global $post, $typenow; ?>
-  
-  <?php if ( $typenow == 'produits' && current_user_can( 'edit_others_posts' ) ) : ?>
-  <script>
-  jQuery(function($) {
-    var sticky = "<br/><span id='sticky-span'><input id='sticky' name='sticky' type='checkbox' value='sticky' <?php checked( is_sticky( $post->ID ) ); ?> /> <label for='sticky' class='selectit'><?php _e( "Stick this post to the front page" ); ?></label><br /></span>";  
-    $('[for=visibility-radio-public]').append(sticky);  
-  });
-  </script>
-  <?php endif; ?>
-  
-<?php
-}
 
 // Ajouter le lien pour récupérer le mot de passe, si l'utilisateur ne s'en souvient plus
 add_filter( 'login_form_bottom', 'lien_mot_de_passe_perdu' );
 function lien_mot_de_passe_perdu( $formbottom ) {
   $formbottom .= '<a href="' . wp_lostpassword_url() . '">Mot de passe perdu ?</a>';
   return $formbottom;
+}
+
+
+// Customize login page
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logomix.png);
+            padding-bottom: 0px;
+            width: 134px;
+            height: 134px;
+            background-size: 134px auto;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Mix Snacking';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+// Vérouiller l'accès à un type de page
+add_action( 'template_redirect', 'private_type_of_page' );
+function private_type_of_page() {
+  if ( is_page_template( 'page-presse.php' ) && ! is_user_logged_in() ) {
+    wp_redirect( wp_login_url() );
+    exit();
+  }
+}
+
+//interdire l'accès aux non admins
+add_action( 'current_screen', 'redirect_non_authorized_user' );
+function redirect_non_authorized_user() {
+  // Si t'es pas admin, tu vires
+  if ( is_user_logged_in() && ! current_user_can( 'manage_options' ) ) {
+    wp_redirect( home_url( '/espace-presse' ) );
+    exit();
+  }
 }

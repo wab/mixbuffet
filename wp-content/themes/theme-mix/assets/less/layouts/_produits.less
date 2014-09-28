@@ -1,3 +1,44 @@
+.intro-produits {
+	@media (min-width: @screen-md-min) {
+	background-image: url('../img/bg-intro-produits.jpg');
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	padding-bottom: @wrap-margin;
+	margin-bottom: -@wrap-margin;
+	}
+	background-color: #fff;
+	border-top: solid 5px @pink;
+
+}
+
+.acces-produits {
+	margin-bottom: @wrap-margin;
+	.wrapper-border {
+		border: none;
+	}
+}
+
+.acces-produit {
+	display: block;
+	border: 1px solid #eee;
+	margin-bottom: 10px;
+
+
+}
+
+
+.single-produits  {
+	.page-header {
+			margin-bottom: 0;
+		}
+
+}
+.backproduits {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
 .menu-produits {
 	padding: 0 3em 0 1em;
 	list-style: none;
@@ -6,6 +47,10 @@
 		display: block;
 		font-size: 18px;
 		text-align: left;
+	}
+
+	.btn {
+		font-family: 'aracne';
 	}
 	
 	.subpages {
@@ -17,6 +62,9 @@
 				margin-bottom: 0;
 			}
 		}
+		.active, .active a {
+			color: @pink;
+		}
 	}
 
 	.active {
@@ -27,4 +75,62 @@
 		}
 	}
 
+}
+
+.entry-produit p {
+	font-size: 1.5em;
+}
+
+.gamme-entrees {
+	.menu-produits {
+		.btn-default {
+			color: @green;
+		}
+		.active {
+		.btn-default {
+			background-color: @green;
+		    color: #fff;
+		    border-color: @green;
+		}
+		.subpages {
+		
+		.active, .active a {
+			color: @green;
+		}
+		}
+	}
+	}
+}
+
+.gamme-plats {
+	.menu-produits {
+		.btn-default {
+			color: @orange;
+		}
+		.active {
+		.btn-default {
+			background-color: @orange;
+		    color: #fff;
+		    border-color: @orange;
+		}
+		.subpages {
+		
+		.active, .active a {
+			color: @orange;
+		}
+		}
+	}
+	}
+}
+
+.modal-header {
+	border: none;
+}
+
+.produit-contenu {
+	border-left: solid 1px #999;
+}
+
+.rel-produits {
+	border-top: dotted 2px #555;
 }

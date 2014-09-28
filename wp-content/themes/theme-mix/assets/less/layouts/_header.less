@@ -1,3 +1,12 @@
 .banner {
-	padding: 10px 0;	
+	padding: 10px 0;
+	@media (min-width: @screen-md-min) {
+	background: url('../img/bg-header.png') top center no-repeat;	
+	}
+}
+
+.home .banner {
+	@media (min-width: @screen-md-min) {
+	background: url('../img/bg-header-accueil.png') top center no-repeat;
+	}	
 }

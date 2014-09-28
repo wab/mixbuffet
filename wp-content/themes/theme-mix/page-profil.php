@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Page dde profil
+Template Name: Page profil
 */
 ?>
 

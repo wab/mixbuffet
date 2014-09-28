@@ -12,20 +12,16 @@
     get_template_part('templates/header');
   ?>
 
-  <div class="wrap container border-radius" role="document">
-    <div class="content wrapper-border border-radius">
-      <main class="main" role="main">
-          <?php include roots_template_path(); ?>
-      </main><!-- /.main -->
-    </div><!-- /.content -->
-    <?php get_template_part('templates/reseaux'); ?>
-  </div><!-- /.wrap -->
+
+    <?php include roots_template_path(); ?>
 
   <aside class="section engagements">
    <div class="container">
-      <a href="<?php echo get_permalink('64'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/engagements.jpg"></a>
+      <a href="<?php echo get_permalink('64'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/engagements.jpg" class="img-responsive"></a>
    </div>
   </aside>
+
+
 
   <?php get_template_part('templates/footer'); ?>
 

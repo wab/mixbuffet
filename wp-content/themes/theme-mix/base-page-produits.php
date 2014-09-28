@@ -13,19 +13,14 @@
   ?>
 
 
-  <div class="wrap container">
-    <div class="wrapper">
-      <h1>intro produits</h1>
-    </div>
-  </div>
+    <?php include roots_template_path(); ?>
 
-  <div class="wrap container relief border-radius" role="document">
-    <div class="content row">
-      <main class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
-      </main><!-- /.main -->
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
+  <aside class="section engagements">
+   <div class="container">
+      <a href="<?php echo get_permalink('64'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/engagements.jpg" class="img-responsive"></a>
+   </div>
+  </aside>
+
 
 
   <?php get_template_part('templates/footer'); ?>

@@ -1,26 +1,38 @@
-body {
+html {
 	background: url('../img/linedpaper.png') #fff;
-
 }
 
+body {
+	background: transparent;
+	@media (min-width: @screen-md-min) {
+	background: url('../img/bg-page.png') top center no-repeat;
+	}
+}
+.home {
+	background: none;
+}
 .section {
-	background: #e9e9e9;
-	min-height: 300px;
 	position: relative;
 	z-index: 0;
-	border-top: @border;
-	border-bottom: @border;
 }
+
+.main-section {
+	position: relative;
+}
+
 .wrap {
 	background: #fff url('../img/blizzard.png');
 	border : @border;
 	border-width: 5px;
+	position: relative;
+	z-index: 100;
 	@media (min-width: @screen-md-min) {
 		box-shadow: @shadow;
 	}	
 }
 
-.wrapper {
+
+.wrapper, .entry-content, .produit-header {
 	padding: 15px;
 }
 
@@ -30,12 +42,21 @@ body {
 	margin: 5px;
 }
 
-.relief {
+.entry-content p {
+	.clearfix(); 
+}
+
+.engagements {
+	background-color: @green;
+	border: 10px solid #fff;
+	border-left: 0;
+	border-right: 0;
+	z-index: 0;
 	@media (min-width: @screen-md-min) {
 		margin-top: -@wrap-margin;
 		margin-bottom: -@wrap-margin;
+		padding-top: @wrap-margin;
 		position: relative;
-		z-index: @zindex-dropdown;
 	}
 	@media (max-width: @screen-md-min) {
 		margin-top: @wrap-margin;
@@ -44,6 +65,34 @@ body {
 
 }
 
-.relief + .section {
-	padding-top: @wrap-margin;
+.reseaux {
+	width: 200px;
+	padding-top: 80px;
+	padding-left: 25px;
+	position: absolute;
+	top: 400px;
+	right: -200px;
+	background: url(../img/bg-reseaux.png) top left no-repeat;
+	a {
+		color: #999;
+		font-size: 20px;
+		&:hover, &:focus {
+			text-decoration: none;
+			color: @pink;
+		}
+	}
+
+}
+
+.home .reseaux {
+	top: 150px;
+}
+
+.back-to-top {
+	display: block;
+	width: 52px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1200;
 }

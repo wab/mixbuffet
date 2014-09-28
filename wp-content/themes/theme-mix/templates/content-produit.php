@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
+  <article <?php post_class('col-md-8'); ?>>
     <header>
       <?php 
       if ( has_post_thumbnail() ) {
@@ -14,9 +14,8 @@
     
     <div class="entry-content">
       <?php the_content(); ?>
-    </div>
-    
-    <?php
+
+      <?php
 
       $img = get_field('image_nutrition');
 
@@ -37,5 +36,33 @@
        </div>
      </div>
     <?php endif; ?>
+
+  </div> <!-- /entry-content -->
+    
+    
   </article>
-<?php endwhile; ?>
+
+    <?php $post_objects = get_field('rel-produits');
+
+    if( $post_objects ): ?>
+    <aside class="col-md-12 wrapper">
+      <h2>Voir aussi</h2>
+        <ul class="list-unstyled row">
+        <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+            <?php setup_postdata($post); ?>
+            <li class="col-md-3">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </li>
+        <?php endforeach; ?>
+        </ul>
+        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+    <?php endif; ?>
+    
+    </aside>
+
+
+    <?php endwhile; ?>
+
+    
+
+

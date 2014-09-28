@@ -1,11 +1,36 @@
-
-<aside class="wrap container border-radius relief footer">
+<?php $menufooter = array(
+  'theme_location'  => 'footer',
+  'menu'            => '',
+  'container'       => false,
+  'menu_class'      => 'nav-footer'
+); ?>
+<aside class="section wrap container border-radius footer">
    <div class="row">
       <div class="col-lg-8">
          <div class="wrapper wrapper-border border-top-left-radius">
-            <h2  class="titre"><strong>Mix</strong> par Mix buffet</h2>
-            <p>Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Nunc iaculis risus vel orci ornare dignissim sed vitae nulla. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh (iaculis pretium sem orci aliquet mauris). Nulla lobortis tempus commodo. Suspendisse potenti cras molestie, risus a enim convallis vitae luctus libero lacinia. Aliquam tincidunt velit sit amet ante hendrerit tempus.</p>
-            <p><a href="#" class="btn btn-primary">visiter le site</a></p>
+            <h2  class="titre"><strong>Mix</strong> par <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-mixbuffet.png" alt="Mix Buffet" /></h2>
+            <?php 
+            // the query
+            $mixbuffet = new WP_Query( 'page_id=262' ); ?>
+
+            <?php if ( $mixbuffet->have_posts() ) : ?>
+
+              <!-- pagination here -->
+
+              <!-- the loop -->
+              <?php while ( $mixbuffet->have_posts() ) : $mixbuffet->the_post(); ?>
+                <?php the_content(); ?>
+              <?php endwhile; ?>
+              <!-- end of the loop -->
+
+              <!-- pagination here -->
+
+              <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+              <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+            <?php endif; ?>
+            <p><a href="http://mixbuffet.com/" class="btn btn-primary">Visiter le site</a></p>
          </div>
          <div class="wrapper wrapper-border border-bottom-left-radius">
             <h2  class="titre"><strong>Recrutement</strong></h2>
@@ -15,18 +40,19 @@
       <div class="col-lg-4">
          <div class="wrapper wrapper-border border-top-right-radius">
             <h2 class="titre"><strong>Coordonnées</strong></h2>
-            <address class="h5">
-               <strong>za du val coric<br>
-                  BP 101T</strong>
+            <address class="h4">
+               za du val coric<br>
+                  BP 101T
                56382 Guer cedex<br>
                <a href="mailto:contact@mix-buffet.com">contact@mix-buffet.com</a>
             </address>
             <hr>
             <h2  class="titre"><strong>Contact</strong></h2>
             <h3 class="h4"><strong>Vous étes consommateur ou fournisseur ?</strong></h3>
-            <p><a href="#" class="btn btn-primary">Accéder à notre formulaire</a></p>
+            <p><a href="<?php echo get_permalink('366'); ?>" class="btn btn-primary">Accéder à notre formulaire</a></p>
          </div>
       </div>
+      
    </div>
 </aside>
 
@@ -43,10 +69,15 @@
       </div>
       <div class="col-xs-12 bg-primary text-center">
          <div class="container">
-            <a href="#">Plan du site</a> - <a href="#">Mentions légales</a>
+            <?php 
+              if (has_nav_menu('footer')) :
+                wp_nav_menu($menufooter);
+              endif;
+            ?>
          </div>
       </div>
    </div><!-- row -->
+
    <!-- Modal -->
    <div class="modal fade" id="recrutement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -57,7 +88,7 @@
          </div>
          <div class="modal-body">
            <p>contenu page recrutement</p>
-           <p>Écrire à : <a href="mailto:recrutement@mix-buffet.com">recrutement@mix-buffet.com</a></p>
+           <p>Écrire à : <a href="mailto:&#114;%65%63&#114;u%74&#101;%6d%65&#110;t&#64;mix-&#98;u&#102;&#102;&#101;%74%2e&#99;o&#109;">recrutement&#64;mix-buffet.com</a></p>
          </div>
          <div class="modal-footer">
            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
@@ -66,5 +97,8 @@
      </div>
    </div>
 </footer>
+
+<a href="#" class="back-to-top hidden-xs hidden-sm"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/backtop.png" alt="retour en haut"></a>
+
 
 <?php wp_footer(); ?>

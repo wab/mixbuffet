@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Page engagements
+*/
+?>
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/page', 'header'); ?>
   <?php get_template_part('templates/content', 'page'); ?>
@@ -27,6 +32,9 @@
 
         <img src="<?php echo $thumb; ?>" alt="<?php echo $image['alt'] ?>" class="img-responsive hidden-sm" />
 
+        <?php if ($titre != '') : ?>
+        
+
         <div class="caption-engagement text-center">
           <div class="wrapper">
             <h2>
@@ -34,6 +42,8 @@
             <?php echo $description; ?>
           </div>
         </div>
+
+        <?php endif; ?>
 
         </a>
 

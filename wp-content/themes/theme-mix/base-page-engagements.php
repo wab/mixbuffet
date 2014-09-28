@@ -18,8 +18,9 @@
           <?php include roots_template_path(); ?>
       </main><!-- /.main -->
     </div><!-- /.content -->
+    <?php get_template_part('templates/reseaux'); ?>
   </div><!-- /.wrap -->
-
+ <div class="wrapper"></div>
   <?php get_template_part('templates/footer'); ?>
 
 </body>
