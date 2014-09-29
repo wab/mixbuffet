@@ -11,7 +11,7 @@
     do_action('get_header');
     get_template_part('templates/header');
   ?>
-
+<section class="main-section">
   <div class="wrap container border-radius" role="document">
     <div class="content wrapper-border border-radius">
       <main class="main" role="main">
@@ -20,7 +20,8 @@
     </div><!-- /.content -->
     <?php get_template_part('templates/reseaux'); ?>
   </div><!-- /.wrap -->
- <div class="wrapper"></div>
+</section>
+<hr>
   <?php get_template_part('templates/footer'); ?>
 
 </body>

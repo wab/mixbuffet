@@ -4,6 +4,8 @@ $produits = get_field('slider_produits');
 
 if( $produits ): ?>
 
+<h1 class="title-slider-produits"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/title-slider-produits.png" alt="Tout est bon" /></h1>
+
     <div class="slider-produits">
             <?php foreach( $produits as $produit ): ?>
                 <div class="slide">
@@ -21,6 +23,8 @@ if( $produits ): ?>
 	      <a class="prev"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-left.png" alt="precedent" /></a>
 	      <a class="next pull-right"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-right.png" alt="suivant" /></a>
 	    </div><!-- /nav wrapper -->
+
+
 
     <?php endif; ?>
 

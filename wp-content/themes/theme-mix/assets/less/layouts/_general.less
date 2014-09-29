@@ -16,10 +16,6 @@ body {
 	z-index: 0;
 }
 
-.main-section {
-	position: relative;
-}
-
 .wrap {
 	background: #fff url('../img/blizzard.png');
 	border : @border;
@@ -30,7 +26,20 @@ body {
 		box-shadow: @shadow;
 	}	
 }
+.main-section {
+	position: relative;
+	@media (min-width: @screen-md-min) {
+	background-image: url('../img/bg-accueil.png');
+	background-position: center;
+	background-repeat:  no-repeat;
+	}
+}
 
+.home .main-section {
+	@media (min-width: @screen-md-min) {
+	background-position: top center;
+	}
+}
 
 .wrapper, .entry-content, .produit-header {
 	padding: 15px;
@@ -55,7 +64,6 @@ body {
 	@media (min-width: @screen-md-min) {
 		margin-top: -@wrap-margin;
 		margin-bottom: -@wrap-margin;
-		padding-top: @wrap-margin;
 		position: relative;
 	}
 	@media (max-width: @screen-md-min) {

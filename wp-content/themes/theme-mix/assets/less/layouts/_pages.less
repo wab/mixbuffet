@@ -38,6 +38,12 @@ a.engagement {
  }
 }
 
+.acces-engagements {
+	display: block;
+	min-height: 438px;
+	background: url('../img/engagements.jpg') top left no-repeat;
+}
+
 .nav-slider, .nav-carousel {
 	width: 90%;
 	position: absolute;
@@ -50,4 +56,21 @@ a.engagement {
 		cursor: pointer;
 		color: @pink;
 	}
+}
+
+hr.quiz {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: dotted 2px #000;
+}
+
+.title-quiz {
+	padding-bottom: 20px;
+	border-bottom: dashed 1px #000;
+}
+
+.quiz-form input[type="button"] {
+	.button-variant(#fff;@pink;@pink);
+	border-style: solid;
+	.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
 }

@@ -12,6 +12,7 @@
     get_template_part('templates/header');
   ?>
 
+  <section class="main-section">
   <div class="wrap container border-radius" role="document">
     <div class="content wrapper-border border-radius">
       <main class="main" role="main">
@@ -20,12 +21,9 @@
     </div><!-- /.content -->
     <?php get_template_part('templates/reseaux'); ?>
   </div><!-- /.wrap -->
+</section>
 
-  <aside class="section engagements">
-   <div class="container">
-      <a href="<?php echo get_permalink('64'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/engagements.jpg"></a>
-   </div>
-  </aside>
+  <?php get_template_part('templates/section-engagements'); ?>
 
   <?php get_template_part('templates/footer'); ?>
 

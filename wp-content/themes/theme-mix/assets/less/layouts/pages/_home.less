@@ -1,8 +1,4 @@
-.home .main-section {
-	@media (min-width: @screen-md-min) {
-	background: url('../img/bg-accueil.png') top center no-repeat;
-	}
-}
+
 
 .home .main h1 {
 	padding: @padding-base-large 0;
@@ -40,7 +36,7 @@
 .section-actus {
 	color: #fff;
 	background: #e20072;
-	padding-bottom: @wrap-margin;
+	padding: @wrap-margin 0;
 	border-top: @border;
 	border-bottom: @border;
 	@media (min-width: @screen-md-min) {
@@ -81,5 +77,12 @@
 	}	
 }
 .section-slider-produits {
+
 	background: url('../img/bg-slider-produits.png') top center no-repeat;
+}
+.title-slider-produits {
+	@media (min-width: @screen-md-min) {
+		position: absolute;
+		z-index: 1200;
+	}
 }

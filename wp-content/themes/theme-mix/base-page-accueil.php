@@ -14,11 +14,7 @@
 
   <?php include roots_template_path(); ?>
 
-  <aside class="section engagements">
-   <div class="container">
-      <a href="<?php echo get_permalink('64'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/engagements.jpg" class="img-responsive"></a>
-   </div>
-  </aside>
+  <?php get_template_part('templates/section-engagements'); ?>
   
   <?php get_template_part('templates/footer'); ?>
 
