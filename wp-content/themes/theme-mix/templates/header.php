@@ -1,6 +1,6 @@
 <header class="banner" role="banner">
 
-  <!-- <div class="container"> -->
+  <div class="container">
 
     <div class="navbar-brand hidden-lg"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logomix.png" alt="<?php bloginfo('name'); ?>"></div>
 
@@ -31,7 +31,7 @@
                           <h2 class="h3">Les entrées / encas</h2>
                           <?php 
                             if (has_nav_menu('entrees')) :
-                              wp_nav_menu(array('theme_location' => 'entrees', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
+                              wp_nav_menu(array('theme_location' => 'entrees', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
                             endif;
                           ?>
                         </div>
@@ -39,7 +39,7 @@
                           <h2 class="h3">Les salades</h2>
                           <?php 
                             if (has_nav_menu('salades')) :
-                              wp_nav_menu(array('theme_location' => 'salades', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
+                              wp_nav_menu(array('theme_location' => 'salades', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
                             endif;
                           ?>
                         </div>
@@ -47,7 +47,7 @@
                           <h2 class="h3">Les plats chauds</h2>
                           <?php 
                             if (has_nav_menu('plats')) :
-                              wp_nav_menu(array('theme_location' => 'plats', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
+                              wp_nav_menu(array('theme_location' => 'plats', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
                             endif;
                           ?>
                         </div>
@@ -55,7 +55,7 @@
                           <h2 class="h3">Les innovations</h2>
                           <?php 
                             if (has_nav_menu('innovations')) :
-                              wp_nav_menu(array('theme_location' => 'innovations', 'menu_class' => 'nav nav-stacked', 'depth' => 1));
+                              wp_nav_menu(array('theme_location' => 'innovations', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
                             endif;
                           ?>
                         </div>
@@ -69,15 +69,15 @@
                <ul class="dropdown-menu">
                  <li>                  
                     <div class="container">
-                      <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                      
+                        
                           <?php 
                             if (has_nav_menu('snaking-break')) :
-                              wp_nav_menu(array('theme_location' => 'snaking-break', 'menu_class' => 'nav nav-stacked'));
+                              wp_nav_menu(array('theme_location' => 'snaking-break', 'menu_class' => 'list-unstyled nav-soumenu', 'depth' => 1, 'link_before' => '> '));
                             endif;
                           ?>
-                        </div>                      
-                      </div>
+                                            
+                  
                     </div>            
                  </li>
                </ul>
@@ -87,15 +87,13 @@
                <ul class="dropdown-menu">
                  <li>                  
                     <div class="container">
-                      <div class="row">
-                        <div class="col-md-3 col-sm-6">
+
                           <?php 
                             if (has_nav_menu('mix-story')) :
-                              wp_nav_menu(array('theme_location' => 'mix-story', 'menu_class' => 'nav nav-stacked'));
+                              wp_nav_menu(array('theme_location' => 'mix-story', 'menu_class' => 'list-unstyled nav-soumenu', 'depth' => 1, 'link_before' => '> '));
                             endif;
                           ?>
-                        </div>                      
-                      </div>
+
                     </div>            
                  </li>
                </ul>
@@ -111,15 +109,13 @@
                <ul class="dropdown-menu">
                  <li>                  
                     <div class="container">
-                      <div class="row">
-                        <div class="col-md-3 col-sm-6">
+
                           <?php 
                             if (has_nav_menu('mix-et-vous')) :
-                              wp_nav_menu(array('theme_location' => 'mix-et-vous', 'menu_class' => 'nav nav-stacked'));
+                              wp_nav_menu(array('theme_location' => 'mix-et-vous', 'menu_class' => 'list-unstyled nav-soumenu', 'depth' => 1, 'link_before' => '> '));
                             endif;
                           ?>
-                        </div>                      
-                      </div>
+
                     </div>          
                  </li>
                </ul>
@@ -133,6 +129,6 @@
 
     </div><!-- navbar -->
 
-  <!-- </div> --> <!-- container -->
+  </div> <!-- container -->
 
 </header>

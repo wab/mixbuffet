@@ -37,7 +37,18 @@
   
   <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
     
-    <a class="fancybox" rel="gallery" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" <?php if(get_field('description')) {?> title ="<?php the_field('description'); ?>" <?php } ?>><?php the_post_thumbnail( 'square', array( 'class' => 'img-responsive' ) ); ?></a>
+    <a class="fancybox engagement" rel="gallery" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" <?php if(get_field('description')) {?> title ="<?php the_field('description'); ?>" <?php } ?>>
+
+      <?php the_post_thumbnail( 'square', array( 'class' => 'img-responsive' ) ); ?>
+
+      <?php if(get_field('description')) {?>
+      <div class="caption-engagement text-center">
+          <div class="wrapper">
+            <?php the_field('description'); ?>
+          </div>
+        </div>
+      <?php } ?>
+    </a>
 
   </div>
 

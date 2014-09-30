@@ -4,3 +4,29 @@
 	background: url('../img/bg-header-accueil.png') top center no-repeat;
 	}
 }
+
+.nav-soumenu {
+	li {
+		float: left;
+		width: auto;
+		max-width: 300px;
+
+		a {
+			display: block;
+			border-right-width: 2px;
+			border-right-style: dotted;
+			padding: 0.5em 2em;
+			min-height: 40px;
+			&:hover, &:focus {
+				text-decoration: none;
+				background: #f4f4f4;
+			}
+
+		}
+
+		&:last-child a {
+			border-right: none;
+		}
+	}
+	
+}
