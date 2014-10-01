@@ -5,10 +5,12 @@ html {
 body {
 	background: transparent;
 	@media (min-width: @screen-md-min) {
-	background: url('../img/bg-page.png') top center no-repeat;
+	background: url('../img/bg-page.png') center top no-repeat;
 	}
 }
-.home {
+
+
+.home, .page-template-page-produits-php {
 	background: none;
 }
 .section {
@@ -30,7 +32,7 @@ body {
 	position: relative;
 	@media (min-width: @screen-md-min) {
 	background-image: url('../img/bg-accueil.png');
-	background-position: center;
+	background-position: center 50px;
 	background-repeat:  no-repeat;
 	}
 }
@@ -43,6 +45,13 @@ body {
 
 .wrapper, .entry-content, .produit-header {
 	padding: 15px;
+}
+
+.wrapper-sm {
+	@media (max-width: @screen-md-min) {
+		padding: 10px;
+	}
+
 }
 
 .wrapper-border {

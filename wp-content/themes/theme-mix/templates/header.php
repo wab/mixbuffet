@@ -18,7 +18,7 @@
         <nav class="collapse navbar-collapse" role="navigation">
 
           <ul class="nav navbar-nav">
-            <li>
+            <li class="hidden-xs">
               <a href="<?php echo esc_url(home_url('/')); ?>"><span class="glyphicon glyphicon-home"></span></a>
             </li>
             <li class="dropdown yamm-fw pink">
@@ -27,37 +27,45 @@
                  <li>           
                     <div class="container">
                       <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                          <h2 class="h3">Les entrées / encas</h2>
-                          <?php 
-                            if (has_nav_menu('entrees')) :
-                              wp_nav_menu(array('theme_location' => 'entrees', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
-                            endif;
-                          ?>
+                        <div class="col-md-3">
+                          <div class="wrapper-sm">
+                            <h2 class="h3">Les entrées / encas</h2>
+                            <?php 
+                              if (has_nav_menu('entrees')) :
+                                wp_nav_menu(array('theme_location' => 'entrees', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
+                              endif;
+                            ?>
+                          </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                          <h2 class="h3">Les salades</h2>
-                          <?php 
-                            if (has_nav_menu('salades')) :
-                              wp_nav_menu(array('theme_location' => 'salades', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
-                            endif;
-                          ?>
+                        <div class="col-md-3">
+                           <div class="wrapper-sm">
+                            <h2 class="h3">Les salades</h2>
+                            <?php 
+                              if (has_nav_menu('salades')) :
+                                wp_nav_menu(array('theme_location' => 'salades', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
+                              endif;
+                            ?>
+                          </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                          <h2 class="h3">Les plats chauds</h2>
-                          <?php 
-                            if (has_nav_menu('plats')) :
-                              wp_nav_menu(array('theme_location' => 'plats', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
-                            endif;
-                          ?>
+                        <div class="col-md-3">
+                           <div class="wrapper-sm">
+                            <h2 class="h3">Les plats chauds</h2>
+                            <?php 
+                              if (has_nav_menu('plats')) :
+                                wp_nav_menu(array('theme_location' => 'plats', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
+                              endif;
+                            ?>
+                          </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                          <h2 class="h3">Les innovations</h2>
-                          <?php 
-                            if (has_nav_menu('innovations')) :
-                              wp_nav_menu(array('theme_location' => 'innovations', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
-                            endif;
-                          ?>
+                        <div class="col-md-3">
+                           <div class="wrapper-sm">
+                            <h2 class="h3">Les innovations</h2>
+                            <?php 
+                              if (has_nav_menu('innovations')) :
+                                wp_nav_menu(array('theme_location' => 'innovations', 'menu_class' => 'list-unstyled', 'depth' => 1, 'before' => '> '));
+                              endif;
+                            ?>
+                          </div>
                         </div>
                       </div>
                     </div>            

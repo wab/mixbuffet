@@ -1,22 +1,26 @@
 .banner {
 	padding: 10px 0;
 	@media (min-width: @screen-md-min) {
-	background: url('../img/bg-header-accueil.png') top center no-repeat;
+	background: url('../img/bg-header-accueil.png') center -20px  no-repeat;
 	}
 }
 
 .nav-soumenu {
 	li {
-		float: left;
-		width: auto;
-		max-width: 300px;
+		@media (min-width: @screen-md-min) { 
+			float: left;
+			width: auto;
+			max-width: 300px;
+		}
 
 		a {
 			display: block;
+			@media (min-width: @screen-md-min) { 
 			border-right-width: 2px;
-			border-right-style: dotted;
-			padding: 0.5em 2em;
+			border-right-style: dotted;		
 			min-height: 40px;
+		}
+		padding: 0.5em 2em;
 			&:hover, &:focus {
 				text-decoration: none;
 				background: #f4f4f4;

@@ -236,6 +236,14 @@
   background: rgba(255,255,255,0.9);
 }
 
+.dropdown-menu {
+  .list-unstyled {
+    li {
+        margin-bottom: 0.5em;
+    }
+  }
+}
+
 // Navbar nav links
 //
 // Builds on top of the `.nav` components with its own modifier class to make
@@ -256,7 +264,18 @@
     padding: 10px;
     line-height: @line-height-computed;
     background: @navbar-default-bg;
-    border-bottom: solid 2px #ccc;
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-style: solid;
+    @media (max-width: @screen-md-min) {
+
+      font-size: 12px;
+      padding: 5px;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      border-bottom: none;
+    }
 
     .box-shadow(@shadow);
   }
@@ -271,6 +290,7 @@
   }
 
   @media (max-width: @grid-float-breakpoint-max) {
+
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;
@@ -496,6 +516,7 @@
       @media (min-width: @screen-md-min) {
       padding : 0 15px;
       border-right: dotted 2px @pink;
+      min-height: 180px;
 
       &:last-child {
         border: none;
@@ -509,6 +530,7 @@
 
   .navbar-toggle {
     border-color: @navbar-default-toggle-border-color;
+    margin-bottom: @wrap-margin;
     &:hover,
     &:focus {
       background-color: @navbar-default-toggle-hover-bg;
@@ -518,10 +540,7 @@
     }
   }
 
-  .navbar-collapse,
-  .navbar-form {
-    border-color: @navbar-default-border;
-  }
+
 
   // Dropdown menu items
   .navbar-nav {
