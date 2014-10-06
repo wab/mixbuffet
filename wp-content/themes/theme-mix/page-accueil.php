@@ -74,7 +74,7 @@ Template Name: Accueil
     <div class="content row">
       <main class="main <?php echo roots_main_class(); ?>" role="main">
 
-        <h1 class="bg-orange border-top-left-radius border-top-right-radius"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/titre-dejeuner.png" alt="Pause déjeuner" /></h1>
+        <h1 class="bg-orange border-top-left-radius border-top-right-radius"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/titre-dejeuner.png" alt="Pause déjeuner" class="img-responsive" /></h1>
         <div class="snack bg-pink ">
           <div class="row">
             <div class="col-md-3">
@@ -171,25 +171,30 @@ Template Name: Accueil
                           $linkquiz = get_sub_field('quizz');
 
                           ?>
+                          <div class="row">
 
-                            <a href="<?php echo $linkquiz; ?>">
+                            <div class="col-md-3 col-xs-12">
+                              <a href="<?php echo $linkquiz; ?>">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acces-quizz.jpg" alt="Mix quizz, faire le test" class="img-responsive" /></a>
+                              
+                            </div>
+
+                            
+
+                            <div class="col-md-9 hidden-xs">
                               <img src="<?php echo $imagequiz['url'] ?>" alt="<?php echo $imagequiz['alt'] ?>" class="img-responsive">
-                            </a>
+                            </div>
+
+                          </div>
 
                       <?php endwhile; ?>
 
                 </div>
 
-                <?php else :
-
-                    // no rows found
-
-                endif;
-
-              ?>
+                <?php endif;?>
 
             </div>
-            </div>
+          </div>
 
         
       </main><!-- /.main -->
@@ -206,7 +211,7 @@ Template Name: Accueil
         <div class="col-md-6 col-sm-12">
           <div class="wrapper">
            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/actualites.png">
-           <a href="<?php echo site_url( '/actualites');?>" class="btn btn-default pull-right">Toutes les actus</a>
+           
            <?php $actus = new WP_Query('post_type=post&posts_per_page=1') ?>
 
            <?php if ( $actus->have_posts() ) : ?>
@@ -231,7 +236,8 @@ Template Name: Accueil
           <?php else : ?>
             <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
           <?php endif; ?>
-
+          <br>
+          <p class="text-right"><a href="<?php echo site_url( '/actualites');?>" class="btn btn-default">Toutes les actus</a></p>
           </div>
         </div>
         <div class="col-md-6 hidden-sm hidden-xs">

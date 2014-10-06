@@ -12,8 +12,10 @@ Template Name: Quiz
 
 <?php while (have_posts()) : the_post(); ?>
   <div class="col-md-10 col-md-offset-1 col-sm-12 quiz">
-    <h2 class="title-quiz"><?php the_title(); ?></h2>
-    <?php the_content(); ?>
+    <div class="wrapper">
+      <h2 class="title-quiz"><?php the_title(); ?></h2>
+      <?php the_content(); ?>
+    </div>
   </div>
 </div>
 
@@ -30,7 +32,9 @@ if( have_rows('acces') ): ?>
     while ( have_rows('acces') ) : the_row(); ?>
 
     <div class="col-md-6 col-sm-12">
-      <a href="<?php the_sub_field('lien'); ?>"><img src="<?php the_sub_field('image'); ?>"></a>
+      
+      <a href="<?php the_sub_field('lien'); ?>"><img src="<?php the_sub_field('image'); ?>" class="img-responsive"></a>
+      
     </div>
 
        

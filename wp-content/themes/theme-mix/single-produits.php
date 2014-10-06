@@ -14,13 +14,13 @@
 				<div class="row">
 					<div class="page-header col-md-12">
 					 	
-					 	<a href="<?php echo site_url( '/nos-produits');?>" class="backproduits"><img src="<?php echo get_template_directory_uri().'/assets/img/retour-produits.png'; ?>" /></a>
-					 	<h1 class="text-center"><img src="<?php echo get_template_directory_uri().'/assets/img/titre-'.$gamme.'.png'; ?>" alt="<?php echo $gamme; ?>"/></h1>
+					 	<a href="<?php echo site_url( '/nos-produits');?>" class="backproduits hidden-xs"><img src="<?php echo get_template_directory_uri().'/assets/img/retour-produits.png'; ?>" /></a>
+					 	<h1 class="text-center"><img src="<?php echo get_template_directory_uri().'/assets/img/titre-'.$gamme.'.png'; ?>" alt="<?php echo $gamme; ?>" class="img-responsive"/></h1>
 
 					 	
 					</div>
 
-					<div class="col-md-4">
+					<div class="col-md-4 hidden-xs">
 						<?php 
 				            if (has_nav_menu($gamme)) :
 				              wp_nav_menu(array('theme_location' => $gamme, 'menu_class' => 'menu-produits', 'depth' => 0, 'walker'          => new Produits_Nav_Walker()));
@@ -31,18 +31,19 @@
 					<?php while (have_posts()) : the_post(); ?>
 					<div class="col-md-8">
 					  <article <?php post_class('produit-contenu'); ?>>
+					  	<header class="produit-header">
+					      
+					      <h1 class="entry-title"><?php the_title(); ?></h1>
+					      
+					    </header>
 					  	<?php 
 					      if ( has_post_thumbnail() ) {
 					        the_post_thumbnail('', array( 'class' => 'img-responsive' )); 
 					      }
 					    ?>
-					    <header class="produit-header">
-					      
-					      <h1 class="entry-title"><?php the_title(); ?></h1>
-					      <?php if( get_field('soustitre') ): ?>
+					    <?php if( get_field('soustitre') ): ?>
 					        <p><?php the_field('soustitre'); ?></p>
 					      <?php endif; ?>
-					    </header>
 					    
 					    <div class="entry-content entry-produit">
 					      <?php the_content(); ?>
@@ -65,7 +66,7 @@
 				    <?php $post_objects = get_field('rel-produits');
 
 				    if( $post_objects ): ?>
-					    <aside class="col-md-12 wrapper rel-produits">
+					    <aside class="col-md-12 wrapper rel-produits hidden-xs">
 					      
 					      <h2>Vous aimerez aussi :</h2>
 					        <ul class="list-unstyled row">
@@ -102,6 +103,14 @@
 			    <?php endwhile; ?>
 
 		</div> <!-- row -->
+
+		<nav class=".visible-xs-block">
+		  <ul class="pager">
+		    <li class="previous"><?php previous_post_link('%link', '< %title'); ?></li>
+		    <li class="next"><?php next_post_link('%link', '%title >'); ?></li>
+		  </ul>
+		</nav>
+
 		</main> <!-- main -->
 	</div> <!-- content -->
 	<?php get_template_part('templates/reseaux'); ?>

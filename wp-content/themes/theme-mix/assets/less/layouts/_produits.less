@@ -31,6 +31,10 @@
 .single-produits  {
 	.page-header {
 			margin-bottom: 0;
+
+		.img-responsive {
+				padding: 0 60px;
+			}
 		}
 
 }
@@ -128,7 +132,9 @@
 }
 
 .produit-contenu {
+	@media (min-width: @screen-md-min) {
 	border-left: solid 1px #999;
+	}
 }
 
 .rel-produits {

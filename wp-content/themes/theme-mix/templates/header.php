@@ -18,7 +18,7 @@
         <nav class="collapse navbar-collapse" role="navigation">
 
           <ul class="nav navbar-nav">
-            <li class="hidden-xs">
+            <li>
               <a href="<?php echo esc_url(home_url('/')); ?>"><span class="glyphicon glyphicon-home"></span></a>
             </li>
             <li class="dropdown yamm-fw pink">

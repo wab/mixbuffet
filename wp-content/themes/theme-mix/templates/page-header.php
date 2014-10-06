@@ -4,7 +4,7 @@
 
 	if( !empty($image) ): ?>
 
-		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
 
 	<?php else: ?>
 	    <?php echo roots_title(); ?>

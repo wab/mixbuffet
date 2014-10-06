@@ -10,18 +10,19 @@ h1,h2,h3,h4,h5, .h1, .h2, .h3, .h4, .h5 {
 hr {
   border:none;
 }
-
-.border-top-left-radius {
-	border-top-left-radius: @border-radius-large;
-}
-.border-top-right-radius {
-	border-top-right-radius: @border-radius-large;
-}
-.border-bottom-left-radius {
-	border-bottom-left-radius: @border-radius-large;
-}
-.border-radius {
-	border-radius: @border-radius-large @border-radius-large 0 @border-radius-large;
+@media (min-width: @screen-md-min) {
+  .border-top-left-radius {
+  	border-top-left-radius: @border-radius-large;
+  }
+  .border-top-right-radius {
+  	border-top-right-radius: @border-radius-large;
+  }
+  .border-bottom-left-radius {
+  	border-bottom-left-radius: @border-radius-large;
+  }
+  .border-radius {
+  	border-radius: @border-radius-large @border-radius-large 0 @border-radius-large;
+  }
 }
 
 .titre {
