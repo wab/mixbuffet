@@ -124,6 +124,18 @@ module.exports = function(grunt) {
         }
       }
     },
+    imagemin: {                          // Task
+      dynamic: {                         // Another target
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          progressive : false,
+          optimizationLevel : 5,
+          cwd: 'assets/img/slider-accueil/',                   // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          dest: 'assets/img/dist/'                  // Destination path prefix
+        }]
+      }
+    },
     watch: {
       less: {
         files: [
@@ -171,6 +183,7 @@ module.exports = function(grunt) {
     'autoprefixer:build',
     'uglify',
     'modernizr',
-    'version'
+    'version',
+    'imagemin'
   ]);
 };

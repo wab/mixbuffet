@@ -30,7 +30,7 @@ Template Name: Page engagements
 
         <a class="engagement">
 
-        <img src="<?php echo $thumb; ?>" alt="<?php echo $image['alt'] ?>" class="img-responsive hidden-sm" />
+        <img src="<?php echo $thumb; ?>" alt="<?php echo $image['alt'] ?>" class="img-responsive" />
 
         <?php if ($titre != '') : ?>
         

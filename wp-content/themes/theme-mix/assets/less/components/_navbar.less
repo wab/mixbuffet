@@ -16,9 +16,6 @@
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
 
-  @media (min-width: @grid-float-breakpoint) {
-    border-radius: @navbar-border-radius;
-  }
 }
 
 
@@ -270,12 +267,12 @@
 
     .box-shadow(@shadow);
 
+    @media (max-width: @screen-md-min) {
+      font-size: 11px;
+    }
     @media (max-width: @screen-sm-min) {
       font-size: 12px;
-
       box-shadow: none;
-      
-
     }
   }
 
@@ -503,12 +500,12 @@
 
     > li:first-child > a {
       color: #fff;
-      @media (min-width: @screen-md-min) {
+      @media (min-width: @screen-sm-min) {
         border-radius: @border-radius-large 0 0 @border-radius-large ;
       }
     }
     > li:last-child > a {
-      @media (min-width: @screen-md-min) {
+      @media (min-width: @screen-sm-min) {
         border-radius: 0 @border-radius-large 0 0;
       }
     }
