@@ -61,7 +61,9 @@ var Roots = {
           items:1,
           nav:false,
           autoHeight : true,
-          smartSpeed : 1000
+          smartSpeed : 1000,
+          autoplayTimeout : 8000,
+          autoplayHoverPause : true
         });
       $(".nav-carousel .next").click(function(){
           $('.carousel').trigger('next.owl.carousel');
@@ -75,7 +77,7 @@ var Roots = {
           items:1,
           dots:false,
           nav:false,
-          autoHeight : true,
+          autoHeight : false,
         });
       $(".nav-slider .next").click(function(){
           $('.slider-produits').trigger('next.owl.carousel');
@@ -94,7 +96,7 @@ var Roots = {
           items:1,
           dots:false,
           nav:false,
-          autoHeight : true,
+          autoHeight : false,
         });
       $(".nav-slider .next").click(function(){
           $('.slider').trigger('next.owl.carousel');

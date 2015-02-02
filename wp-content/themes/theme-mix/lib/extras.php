@@ -21,6 +21,13 @@ function roots_wp_title($title) {
 }
 add_filter('wp_title', 'roots_wp_title', 10);
 
+// barre d'admin
+
+function my_function_admin_bar(){
+    return false;
+}
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+
 /**
  * Custom functions
  */
@@ -158,13 +165,13 @@ function my_login_logo_url_title() {
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 // Vérouiller l'accès à un type de page
-add_action( 'template_redirect', 'private_type_of_page' );
-function private_type_of_page() {
-  if ( is_page_template( 'page-presse.php' ) && ! is_user_logged_in() ) {
-    wp_redirect( wp_login_url() );
-    exit();
-  }
-}
+// add_action( 'template_redirect', 'private_type_of_page' );
+// function private_type_of_page() {
+//   if ( is_page_template( 'page-presse.php' ) && ! is_user_logged_in() ) {
+//     wp_redirect( wp_login_url() );
+//     exit();
+//   }
+// }
 
 //interdire l'accès aux non admins
 add_action( 'current_screen', 'redirect_non_authorized_user' );

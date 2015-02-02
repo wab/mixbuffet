@@ -71,8 +71,14 @@
 
 }
 
-.entry-produit p {
+.entry-produit {
+
+	
+	.desc {
+	color: @pink;
 	font-size: 1.5em;
+	font-style: italic;
+	}
 }
 
 .gamme-entrees {
@@ -94,6 +100,10 @@
 		}
 	}
 	}
+
+	.entry-produits {
+		color: @green;
+	}
 }
 
 .gamme-plats {
@@ -114,6 +124,36 @@
 		}
 		}
 	}
+	}
+
+	.entry-produits {
+		color: @orange;
+	}
+}
+
+.gamme-innovations {
+	.menu-produits {
+		.btn-default {
+			color: #000;
+
+		}
+		.active {
+		.btn-default {
+			background-color: #000;
+		    color: #fff;
+		    border-color: #000;
+		}
+		.subpages {
+		
+		.active, .active a {
+			color: #000;
+		}
+		}
+	}
+	}
+
+	.entry-produits {
+		color: #000;
 	}
 }
 

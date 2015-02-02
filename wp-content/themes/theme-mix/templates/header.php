@@ -57,7 +57,7 @@
                             ?>
                           </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 noborder">
                            <div class="wrapper-sm">
                             <h2 class="h3">Les innovations</h2>
                             <?php 
@@ -67,6 +67,9 @@
                             ?>
                           </div>
                         </div>
+                        <p class="wrapper">
+                          <a href="<?php echo site_url( '/nos-produits');?>" class="btn btn-primary btn-pink">Voir toutes nos gammes</a>
+                        </p>
                       </div>
                     </div>            
                  </li>

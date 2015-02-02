@@ -62,7 +62,3 @@
 
 
     <?php endwhile; ?>
-
-    
-
-

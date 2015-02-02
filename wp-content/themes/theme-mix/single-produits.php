@@ -6,18 +6,20 @@
 	if( has_term( 'plats', 'gammes' ) ) {
 		$gamme = 'plats';
 	}
+	if( has_term( 'innovation', 'gammes' ) ) {
+		$gamme = 'innovations';
+	}
 ?>
 
 	<div class="wrap container border-radius" role="document">
     	<div class="content wrapper-border border-radius">
       		<main class="main gamme-<?php echo $gamme; ?>" role="main">
 				<div class="row">
-					<div class="page-header col-md-12">
-					 	
-					 	<a href="<?php echo site_url( '/nos-produits');?>" class="backproduits hidden-xs"><img src="<?php echo get_template_directory_uri().'/assets/img/retour-produits.png'; ?>" /></a>
-					 	<h1 class="text-center"><img src="<?php echo get_template_directory_uri().'/assets/img/titre-'.$gamme.'.png'; ?>" alt="<?php echo $gamme; ?>" class="img-responsive"/></h1>
 
-					 	
+					<!-- Titre de la gamme -->
+					<div class="page-header col-md-12">					 	
+					 	<a href="<?php echo site_url( '/nos-produits');?>" class="backproduits hidden-xs"><img src="<?php echo get_template_directory_uri().'/assets/img/retour-produits.png'; ?>" /></a>
+					 	<h1 class="text-center"><img src="<?php echo get_template_directory_uri().'/assets/img/titre-'.$gamme.'.png'; ?>" alt="<?php echo $gamme; ?>" class="img-responsive"/></h1>					 	
 					</div>
 
 					<div class="col-md-4 hidden-xs">
@@ -29,25 +31,30 @@
 					</div>
 
 					<?php while (have_posts()) : the_post(); ?>
+
 					<div class="col-md-8">
+					  
 					  <article <?php post_class('produit-contenu'); ?>>
-					  	<header class="produit-header">
-					      
-					      <h1 class="entry-title"><?php the_title(); ?></h1>
-					      
+					  	
+					  	<header class="produit-header">  
+					      <h1 class="entry-title"><?php the_title(); ?></h1>      
 					    </header>
 					  	<?php 
 					      if ( has_post_thumbnail() ) {
 					        the_post_thumbnail('', array( 'class' => 'img-responsive' )); 
 					      }
 					    ?>
-					    <?php if( get_field('soustitre') ): ?>
-					        <p><?php the_field('soustitre'); ?></p>
-					      <?php endif; ?>
+					    
+					    
 					    
 					    <div class="entry-content entry-produit">
-					      <?php the_content(); ?>
+							<?php if( get_field('soustitre') ): ?>
+					        <p class="entry-content"><?php the_field('soustitre'); ?></p>
+					      	<?php endif; ?>
 
+					      	<div class="desc">
+					      		<?php the_content(); ?>
+					      	</div>
 					      <?php
 
 					      $img = get_field('image_nutrition');
@@ -104,7 +111,7 @@
 
 		</div> <!-- row -->
 
-		<nav class=".visible-xs-block">
+		<nav class="visible-xs-block">
 		  <ul class="pager">
 		    <li class="previous"><?php previous_post_link('%link', '< %title'); ?></li>
 		    <li class="next"><?php next_post_link('%link', '%title >'); ?></li>

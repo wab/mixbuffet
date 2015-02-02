@@ -87,7 +87,7 @@
            <h3 class="modal-title" id="myModalLabel">Contact recrutement</h3>
          </div>
          <div class="modal-body">
-           <p>contenu page recrutement</p>
+           <h4>Vous aussi, vous avez envie de tenter l’aventure MIX ?</h4>
            <p>Écrire à : <a href="mailto:&#114;%65%63&#114;u%74&#101;%6d%65&#110;t&#64;mix-&#98;u&#102;&#102;&#101;%74%2e&#99;o&#109;">recrutement&#64;mix-buffet.com</a></p>
          </div>
          <div class="modal-footer">

@@ -55,8 +55,12 @@ a.engagement {
 
 .acces-engagements {
 	display: block;
-	min-height: 438px;
-	background: url('../img/engagements.jpg') top left no-repeat;
+	height: 450px;
+	background: url('../img/engagements.jpg') center no-repeat;
+	@media (max-width: @screen-md-min) {
+		background-image: url('../img/engagements-mobile.jpg');
+		height: 350px;
+	}
 }
 
 .nav-slider, .nav-carousel {

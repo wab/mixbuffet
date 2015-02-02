@@ -183,7 +183,6 @@ module.exports = function(grunt) {
     'autoprefixer:build',
     'uglify',
     'modernizr',
-    'version',
-    'imagemin'
+    'version'
   ]);
 };
